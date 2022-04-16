@@ -7,6 +7,12 @@
   --orange: hsl(25, 97%, 53%);
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
