@@ -8,9 +8,22 @@
 }
 
 body {
-  width: 100vw;
+  display: flex;
   height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--very-dark-blue);
+}
+
+.rating-card {
+  background-color: var(--dark-blue);
+  padding: 5ch;
+  border-radius: 20px;
+}
+
+.thank-you-card {
+  display: none;
 }
 
 .attribution {
