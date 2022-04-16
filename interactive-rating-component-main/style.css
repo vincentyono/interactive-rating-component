@@ -20,6 +20,7 @@ body {
 }
 
 .rating-card {
+  /* display: none; */
   background-color: var(--darker-blue);
   padding: 4ch;
   border-radius: 20px;
@@ -67,17 +68,67 @@ body {
   margin: 15px;
 }
 
+.hover-scale-btn:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.active-scale-btn {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
 .rating-submit-btn {
   padding: 1ch;
   border-radius: 20px;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
   background-color: var(--orange);
   color: var(--white);
 }
 
+.rating-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.rating-submit-btn:active {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
 .thank-you-card {
+  display: flex;
   display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 3ch;
+  border-radius: 20px;
+
+  background-color: var(--darker-blue);
+}
+
+#thank-you-card-image {
+  margin: 0 0 2em 0;
+}
+
+.selected-rating {
+  padding: 0.5ch;
+  border-radius: 20px;
+  background-color: var(--dark-grey);
+  color: var(--orange);
+}
+
+.thank-you-title {
+  color: var(--white);
+  margin-top: 2ch;
+}
+
+.thank-you-description {
+  max-width: 35ch;
+  margin: 0;
+  text-align: center;
+  color: var(--light-grey);
 }
 
 .attribution {
@@ -89,4 +140,36 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .rating-card {
+    padding: 2ch;
+  }
+
+  .rating-title {
+    font-size: 1.4rem;
+  }
+
+  .rating-description {
+    font-size: 0.8rem;
+    max-width: 32ch;
+  }
+
+  .rating-scale-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rating-scale-btn-number {
+    margin: 14px;
+  }
+
+  .rating-submit-btn {
+    font-size: 0.8rem;
+  }
+
+  .thank-you-description {
+    font-size: 0.8rem;
+  }
 }
